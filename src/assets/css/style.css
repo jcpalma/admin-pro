@@ -5650,10 +5650,12 @@ Template Name: Admin Pro Admin
 Author: Wrappixel
 Email: niravjoshi87@gmail.com
 File: scss
+1650
 */
 /*============================================================== 
  For Laptop & above all (1650px) 
  ============================================================== */
+ 
 @media (min-width: 1650px) {
   .widget-app-columns {
     -webkit-column-count: 3;
