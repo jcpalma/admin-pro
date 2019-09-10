@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+//https://valor-software.com/ng2-charts/#GeneralInfo
 import { ChartType } from 'chart.js';
 import { MultiDataSet, Label } from 'ng2-charts';
 
