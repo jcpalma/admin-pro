@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import {FormsModule} from '@angular/forms';
 
 import { ShareModule } from '../shared/shared.module';
 import { PageRoutingModule } from './pages.route';
@@ -8,23 +9,28 @@ import { GraphComponent } from './graph/graph.component';
 import { ProgressComponent } from './progress/progress.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+//Temporal
+import {IncrementadorComponent} from '../components/incrementador/incrementador.component';
 
 @NgModule({
     declarations: [
         PagesComponent,
         DashboardComponent,
         ProgressComponent,
-        GraphComponent
+        GraphComponent,
+        IncrementadorComponent
     ],
     exports: [
         PagesComponent,
         DashboardComponent,
         ProgressComponent,
-        GraphComponent
+        GraphComponent,
+        IncrementadorComponent
     ],
     imports: [
         ShareModule,
-        PageRoutingModule
+        PageRoutingModule,
+        FormsModule
     ]
 })
 export class PageModule { }
