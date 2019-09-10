@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { GraphComponent } from './graph/graph.component';
 
+
 const pagesRoutes: Routes = [
     {
         path: '', component: PagesComponent,

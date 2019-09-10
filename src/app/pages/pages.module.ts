@@ -8,9 +8,13 @@ import { PagesComponent } from './pages.component';
 import { GraphComponent } from './graph/graph.component';
 import { ProgressComponent } from './progress/progress.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChartsModule } from 'ng2-charts';
+
 
 //Temporal
 import {IncrementadorComponent} from '../components/incrementador/incrementador.component';
+import { GraphDoughnutComponent } from '../components/graph-doughnut/graph-doughnut.component';
+
 
 @NgModule({
     declarations: [
@@ -18,19 +22,22 @@ import {IncrementadorComponent} from '../components/incrementador/incrementador.
         DashboardComponent,
         ProgressComponent,
         GraphComponent,
-        IncrementadorComponent
+        IncrementadorComponent,
+        GraphDoughnutComponent
     ],
     exports: [
         PagesComponent,
         DashboardComponent,
         ProgressComponent,
         GraphComponent,
-        IncrementadorComponent
+        IncrementadorComponent,
+        GraphDoughnutComponent
     ],
     imports: [
         ShareModule,
         PageRoutingModule,
-        FormsModule
+        FormsModule,
+        ChartsModule
     ]
 })
 export class PageModule { }
