@@ -7,11 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef }
 })
 export class IncrementadorComponent implements OnInit {
 
-  @ViewChild('txtProgress', {static: false}) 
+  @ViewChild('txtProgress', { static: false })
   txtProgress: ElementRef;
 
-  @Input('nombre')
-  leyenda: string = 'Leyenda';
+  @Input('nombre') leyenda: string = 'Leyenda';
 
   @Input()
   progreso: number = 50;
@@ -24,38 +23,38 @@ export class IncrementadorComponent implements OnInit {
   }
 
   ngOnInit() {
-    //console.log('Leyenda', this.leyenda);
-    //console.log('Progreso', this.progreso);
+    // console.log('Leyenda', this.leyenda);
+    // console.log('Progreso', this.progreso);
   }
 
-  onChange(valor: number) { 
+  onChange(valor: number) {
 
-    
-    if (this.progreso + valor > 100) { 
-      this.progreso = 100; 
+
+    if (this.progreso + valor > 100) {
+      this.progreso = 100;
     }
-    else if (this.progreso + valor < 0) { 
-      this.progreso = 0; 
+    else if (this.progreso + valor < 0) {
+      this.progreso = 0;
     }
-    else { 
-      this.progreso = this.progreso + valor; 
+    else {
+      this.progreso = this.progreso + valor;
     }
     this.txtProgress.nativeElement.value = this.progreso;
-    this.cambioValor.emit(this.progreso); 
+    this.cambioValor.emit(this.progreso);
 
   }
 
   setValue(valor: number): void {
-    if (this.progreso + valor > 100) { 
-      this.progreso = 100; 
+    if (this.progreso + valor > 100) {
+      this.progreso = 100;
     }
-    else if (this.progreso + valor < 0) { 
-      this.progreso = 0; 
+    else if (this.progreso + valor < 0) {
+      this.progreso = 0;
     }
-    else { 
-      this.progreso = this.progreso + valor; 
+    else {
+      this.progreso = this.progreso + valor;
     }
-    this.cambioValor.emit(this.progreso); 
+    this.cambioValor.emit(this.progreso);
     this.txtProgress.nativeElement.focus();
   }
 
