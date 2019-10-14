@@ -4,7 +4,7 @@
         <!-- Logo -->
         <!-- ============================================================== -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" routerLink="/dashboard">
                 <!-- Logo icon --><b>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
@@ -48,7 +48,7 @@
                         <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i
                                 class="ti-close"></i></a> </form>
                 </li>
-                
+
                 <!-- ============================================================== -->
                 <!-- Messages -->
                 <!-- ============================================================== -->
@@ -116,46 +116,49 @@
                 <!-- ============================================================== -->
                 <!-- End Messages -->
                 <!-- ============================================================== -->
-                
+
                 <!-- ============================================================== -->
                 <!-- Language -->
                 <!-- ============================================================== -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"> <i class="flag-icon flag-icon-us"></i></a>
-                    <div class="dropdown-menu dropdown-menu-right animated fadeIn"> <a class="dropdown-item"
-                            href="#"><i class="flag-icon flag-icon-in"></i> India</a> <a class="dropdown-item"
-                            href="#"><i class="flag-icon flag-icon-fr"></i> French</a> <a class="dropdown-item"
-                            href="#"><i class="flag-icon flag-icon-cn"></i> China</a> <a class="dropdown-item"
-                            href="#"><i class="flag-icon flag-icon-de"></i> Dutch</a> </div>
+                    <div class="dropdown-menu dropdown-menu-right animated fadeIn"> <a class="dropdown-item" href="#"><i
+                                class="flag-icon flag-icon-in"></i> India</a> <a class="dropdown-item" href="#"><i
+                                class="flag-icon flag-icon-fr"></i> French</a> <a class="dropdown-item" href="#"><i
+                                class="flag-icon flag-icon-cn"></i> China</a> <a class="dropdown-item" href="#"><i
+                                class="flag-icon flag-icon-de"></i> Dutch</a> </div>
                 </li>
                 <!-- ============================================================== -->
                 <!-- Profile -->
                 <!-- ============================================================== -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user"
-                            class="profile-pic" /></a>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="javascript:void(0);"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                            src="assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
                     <div class="dropdown-menu dropdown-menu-right animated fadeIn">
                         <ul class="dropdown-user">
                             <li>
                                 <div class="dw-user-box">
                                     <div class="u-img"><img src="assets/images/users/1.jpg" alt="user"></div>
                                     <div class="u-text">
-                                        <h4>Steave Jobs</h4>
-                                        <p class="text-muted">varun@gmail.com</p><a href="pages-profile.html"
-                                            class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+                                        <h4>{{userService.user.name}}</h4>
+                                        <p class="text-muted">{{ userService.user.email }}</p><a href=""
+                                            class="btn btn-rounded btn-danger btn-sm">Perfil</a>
                                     </div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
-                            <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
-                            <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                            <li><a href="javascript:void(0);"><i class="ti-user"></i> Mi Perfil</a></li>
+                            <li><a href="javascript:void(0);"><i class="ti-wallet"></i> My Balance</a></li>
+                            <li><a href="javascript:void(0);"><i class="ti-email"></i> Mensajes</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                            <li><a routerLink="/settings"><i class="ti-settings"></i> Configuraciones</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="javascript:void(0);" (click)="userService.logout()">
+                                    <i class="fa fa-power-off"></i> Salir
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
