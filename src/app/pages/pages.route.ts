@@ -9,11 +9,13 @@ import { PromesasComponent } from './promesas/promesas.component';
 
 import { AccountSettingComponent } from './account-setting/account-setting.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { LoginGuard } from '../services/service.index';
 
 
 const pagesRoutes: Routes = [
     {
         path: '', component: PagesComponent,
+        canActivate: [LoginGuard],
         children: [
             { path: 'dashboard', component: DashboardComponent, data: { title: 'Dashbaord' } },
             { path: 'progress', component: ProgressComponent, data: { title: 'Barras de Progreso' } },
