@@ -32,11 +32,9 @@ export class IncrementadorComponent implements OnInit {
 
     if (this.progreso + valor > 100) {
       this.progreso = 100;
-    }
-    else if (this.progreso + valor < 0) {
+    } else if (this.progreso + valor < 0) {
       this.progreso = 0;
-    }
-    else {
+    } else {
       this.progreso = this.progreso + valor;
     }
     this.txtProgress.nativeElement.value = this.progreso;
@@ -47,11 +45,9 @@ export class IncrementadorComponent implements OnInit {
   setValue(valor: number): void {
     if (this.progreso + valor > 100) {
       this.progreso = 100;
-    }
-    else if (this.progreso + valor < 0) {
+    } else if (this.progreso + valor < 0) {
       this.progreso = 0;
-    }
-    else {
+    } else {
       this.progreso = this.progreso + valor;
     }
     this.cambioValor.emit(this.progreso);
